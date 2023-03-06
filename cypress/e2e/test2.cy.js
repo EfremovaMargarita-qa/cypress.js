@@ -26,6 +26,7 @@ describe('Тестирование testqastudio', function () {
         cy.get('#order_comments').type('Просьба доставить товары после 18 00, спасибо!');
         cy.get('.wc_payment_method > label').click();
         cy.get('#place_order').click();
+        cy.contains('Оформление заказа').should('be.visible');
        
 
         
