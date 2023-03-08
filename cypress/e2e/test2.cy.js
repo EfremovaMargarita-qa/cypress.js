@@ -11,7 +11,7 @@ describe('Тестирование testqastudio', function () {
         cy.get('.header-left-items > .site-branding > .logo > .logo-dark').click();
         cy.get('.post-11337 > .product-inner > .product-thumbnail > .woocommerce-LoopProduct-link > .attachment-woocommerce_thumbnail').click();
         cy.get('.summary > .cart > .product-button-wrapper > .single_add_to_cart_button').click();
-        cy.get('.checkout').click();
+        cy.get('.checkout',{timeout: 10000}).should('be.visible').click();
         cy.get('#billing_first_name').type('Маргарита');
         cy.get('#billing_last_name').type('Ефремова');
         cy.get('#select2-billing_country-container').click();
